@@ -194,6 +194,9 @@ open class TagView: UIButton {
         if enableRemoveButton {
             size.width += removeButtonIconSize + paddingX
         }
+        if let buttonImage = image(for: UIControl.State.normal) {
+            size.width += buttonImage.size.width + 4
+        }
         return size
     }
     
